@@ -17420,6 +17420,11 @@ textarea.form-control-lg {
   content: "爛";
 }
 
+@media (max-width: 1199.98px) {
+  .text-center-md-down {
+    text-align: center !important;
+  }
+}
 :root {
   --header-height: 15vh;
   --neon-blue: rgba(0, 217, 255);
@@ -17582,12 +17587,7 @@ h2, .h2 {
   font-size: var(--size-1);
 }
 
-.form-floating > label {
-  color: rgba(255, 166, 0, 0.877);
-}
-
 .form-select, .form-control {
-  color: rgba(255, 166, 0, 0.877);
   background-color: rgb(59, 59, 59);
   border-radius: 15px;
 }
@@ -17598,6 +17598,12 @@ h2, .h2 {
 
 .form-floating > textarea:not(:placeholder-shown) ~ label::after {
   background-color: transparent !important;
+}
+
+.modal-body {
+  max-height: 60vh; /* altezza massima del contenuto */
+  overflow-y: auto; /* abilita lo scroll verticale */
+  padding-right: 1rem; /* evita che il testo venga coperto dalla scrollbar */
 }
 
 /*# sourceMappingURL=custom.css.map */

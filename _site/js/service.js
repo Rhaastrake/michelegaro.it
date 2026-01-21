@@ -28,6 +28,24 @@ Il servizio include consigli pratici, interventi mirati e spiegazioni chiare, la
   <!-- Tipo di form -->
   <input type="hidden" name="formType" value="assistance">
 
+    <!-- Nome -->
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="name" name="name" placeholder="Nome e cognome *" required>
+    <label for="name">Nome e cognome *</label>
+  </div>
+
+  <!-- Telefono -->
+  <div class="form-floating mb-3">
+    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Numero di telefono *" required>
+    <label for="phoneNumber">Numero di telefono *</label>
+  </div>
+
+  <!-- Città -->
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="city" name="city" placeholder="Dove abiti? *" required>
+    <label for="city">Dove abiti? *</label>
+  </div>
+
   <!-- Tipo PC -->
   <div class="mb-3">
     <select class="form-select" name="pcType" id="pcType" required>
@@ -55,24 +73,6 @@ Il servizio include consigli pratici, interventi mirati e spiegazioni chiare, la
     <label for="details">Aggiungi eventuali dettagli</label>
   </div>
 
-  <!-- Nome -->
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="name" name="name" placeholder="Nome e cognome *" required>
-    <label for="name">Nome e cognome *</label>
-  </div>
-
-  <!-- Telefono -->
-  <div class="form-floating mb-3">
-    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Numero di telefono *" required>
-    <label for="phoneNumber">Numero di telefono *</label>
-  </div>
-
-  <!-- Città -->
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="city" name="city" placeholder="Dove abiti? *" required>
-    <label for="city">Dove abiti? *</label>
-  </div>
-
   <!-- Privacy -->
   <div class="form-check form-switch mb-3">
     <input class="form-check-input" type="checkbox" id="privacyCheck" required>
@@ -94,6 +94,24 @@ Posso anche guidarti nella ricerca delle migliori offerte sul mercato e risponde
 <form method="post" class="needs-validation" novalidate>
   <!-- Tipo di form -->
   <input type="hidden" name="formType" value="purchaseGuide">
+
+    <!-- Nome -->
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="name" name="name" placeholder="Nome e cognome *" required>
+    <label for="name">Nome e cognome *</label>
+  </div>
+
+  <!-- Telefono -->
+  <div class="form-floating mb-3">
+    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Numero di telefono *" required>
+    <label for="phoneNumber">Numero di telefono *</label>
+  </div>
+
+  <!-- Città -->
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control" id="city" name="city" placeholder="Dove abiti? *" required>
+    <label for="city">Dove abiti? *</label>
+  </div>
 
   <!-- Tipo PC -->
   <div class="mb-3">
@@ -128,8 +146,8 @@ Posso anche guidarti nella ricerca delle migliori offerte sul mercato e risponde
   <div class="mb-3">
     <select class="form-select" name="secondHand" id="secondHand" required>
       <option value="" selected disabled>Valuteresti l'usato? *</option>
-      <option value="yes">Si</option>
-      <option value="no">No</option>
+      <option value="yes">Si, lo valuterei</option>
+      <option value="no">No, voglio tutto nuovo</option>
       <option value="half">Solo in parte</option>
     </select>
   </div>
@@ -138,8 +156,8 @@ Posso anche guidarti nella ricerca delle migliori offerte sul mercato e risponde
   <div class="mb-3">
     <select class="form-select" name="display" id="display" required>
       <option value="" selected disabled>Cerchi anche uno schermo? *</option>
-      <option value="yes">Si</option>
-      <option value="no">No</option>
+      <option value="yes">Si, ne ho bisogno</option>
+      <option value="no">No, ne ho già uno</option>
     </select>
   </div>
 
@@ -147,24 +165,6 @@ Posso anche guidarti nella ricerca delle migliori offerte sul mercato e risponde
   <div class="form-floating mb-3">
     <textarea class="form-control auto-expand" id="details" name="details" placeholder="Aggiungi eventuali dettagli o preferenze" style="height:100px; resize:none;"></textarea>
     <label for="details">Aggiungi eventuali dettagli o preferenze</label>
-  </div>
-
-  <!-- Nome -->
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="name" name="name" placeholder="Nome e cognome *" required>
-    <label for="name">Nome e cognome *</label>
-  </div>
-
-  <!-- Telefono -->
-  <div class="form-floating mb-3">
-    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Numero di telefono *" required>
-    <label for="phoneNumber">Numero di telefono *</label>
-  </div>
-
-  <!-- Città -->
-  <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="city" name="city" placeholder="Dove abiti? *" required>
-    <label for="city">Dove abiti? *</label>
   </div>
 
   <!-- Privacy -->
@@ -196,12 +196,6 @@ Tutte le configurazioni e le modifiche vengono discusse direttamente con te, gar
     Parlami liberamente di tuttò ciò che vorresti introdurre
   </p>
 
-  <!-- Dettagli aggiuntivi -->
-  <div class="form-floating mb-3">
-    <textarea class="form-control auto-expand" id="details" name="details" placeholder="Scopo e funzionamento del server *" style="height:100px; resize:none;" required></textarea>
-    <label for="details">Scopo e funzionamento del server *</label>
-  </div>
-
   <!-- Nome -->
   <div class="form-floating mb-3">
     <input type="text" class="form-control" id="name" name="name" placeholder="Nome e cognome *" required>
@@ -212,6 +206,12 @@ Tutte le configurazioni e le modifiche vengono discusse direttamente con te, gar
   <div class="form-floating mb-3">
     <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Numero di telefono *" required>
     <label for="phoneNumber">Numero di telefono *</label>
+  </div>
+
+  <!-- Dettagli aggiuntivi -->
+  <div class="form-floating mb-3">
+    <textarea class="form-control auto-expand" id="details" name="details" placeholder="Scopo e funzionamento del server *" style="height:100px; resize:none;" required></textarea>
+    <label for="details">parlami del server che vorresti *</label>
   </div>
 
   <!-- Privacy -->
@@ -236,33 +236,6 @@ Il servizio è pensato per aiutarti a mantenere i tuoi progetti online efficient
   <!-- Tipo di form -->
   <input type="hidden" name="formType" value="application">
 
-  <!-- Tipo PC -->
-  <div class="mb-3">
-    <select class="form-select" name="pcType" id="pcType" required>
-      <option value="" selected disabled>Si tratta di un PC fisso o portatile? *</option>
-      <option value="desktop">Fisso</option>
-      <option value="laptop">Portatile</option>
-    </select>
-  </div>
-
-  <!-- Specifica servizio -->
-  <div class="mb-3">
-    <select class="form-select" name="serviceSpecification" id="serviceSpecification" required>
-      <option value="" selected disabled>Di cosa si tratta? *</option>
-      <option value="genericAssistance">Assistenza generica</option>
-      <option value="software">Aiuto con uno o più programmi</option>
-      <option value="cleaning">Pulizia</option>
-      <option value="hardware">Cambio componenti</option>
-      <option value="noBoot">Il PC non si accende</option>
-    </select>
-  </div>
-
-  <!-- Dettagli aggiuntivi -->
-  <div class="form-floating mb-3">
-    <textarea class="form-control auto-expand" id="details" name="details" placeholder="Aggiungi eventuali dettagli" style="height:100px; resize:none;"></textarea>
-    <label for="details">Aggiungi eventuali dettagli</label>
-  </div>
-
   <!-- Nome -->
   <div class="form-floating mb-3">
     <input type="text" class="form-control" id="name" name="name" placeholder="Nome e cognome *" required>
@@ -275,10 +248,26 @@ Il servizio è pensato per aiutarti a mantenere i tuoi progetti online efficient
     <label for="phoneNumber">Numero di telefono *</label>
   </div>
 
-  <!-- Città -->
+  <!-- Integrazione database o servizi esterni -->
+  <div class="mb-3">
+    <select class="form-select" name="dbIntegration" id="dbIntegration" required>
+    <option value="" selected disabled>Sono necessari database? *</option>
+    <option value="yes">Si, è necessario</option>
+    <option value="no">No, non è necessario</option>
+    </select>
+  </div>
+
+  
+  <!-- Data di consegna -->
   <div class="form-floating mb-3">
-    <input type="text" class="form-control" id="city" name="city" placeholder="Dove abiti? *" required>
-    <label for="city">Dove abiti? *</label>
+    <input type="date" id="expiryDate" class="form-control" placeholder=" " required>
+    <label for="expiryDate">Quando deve essere pronto il progetto? *</label>
+  </div>
+
+  <!-- Scopo del sito -->
+  <div class="form-floating mb-3">
+    <textarea class="form-control auto-expand" id="details" name="details" placeholder="Qual è lo scopo il sito? *" style="height:100px; resize:none;"></textarea>
+    <label for="details">Qual è lo scopo il sito? *</label>
   </div>
 
   <!-- Privacy -->

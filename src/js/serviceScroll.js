@@ -10,7 +10,14 @@ function updateServiceButtonLinks() {
 
     if (window.innerWidth <= 1200) {
       const scrollHandler = () => {
-        if (target) target.scrollIntoView({ behavior: "smooth" });
+        if (!target) return;
+
+        const top = target.getBoundingClientRect().top + window.pageYOffset;
+
+        window.scrollTo({
+          top: top - 16, //(1rem)
+          behavior: "smooth"
+        });
       };
       btn._scrollHandler = scrollHandler;
       btn.addEventListener("click", scrollHandler);

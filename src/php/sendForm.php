@@ -20,26 +20,50 @@ function safeNum($value) {
 }
 
 
-$formType               = clean($_POST['formType'] ?? '');
 
+$formType    = clean($_POST['formType'] ?? '');
+
+
+//
 //Basic informations
-$details                = clean($_POST['details'] ?? '');
+//
 $name                   = clean($_POST['name'] ?? '');
 $phoneNumber            = safeNum($_POST['phoneNumber'] ?? '');
 $city                   = clean($_POST['city'] ?? '');
+$details                = clean($_POST['details'] ?? '');
 
+
+//
 //Assistance
+//
 $serviceSpecification   = clean($_POST['serviceSpecification'] ?? '');
 $pcType                 = clean($_POST['pcType'] ?? '');
 
-//Purchase Guide
+
+//
+//Purchase guide
+//
 $useType                = clean($_POST['useType'] ?? '');
 $priceRange             = clean($_POST['priceRange'] ?? '');
 $secondHand             = clean($_POST['secondHand'] ?? '');
 $display                = clean($_POST['display'] ?? '');
 
 
+//
+//Discord server
+//
+
+
+//
+//Website / Application
+//
+$dbIntegration          = clean($_POST['dbIntegration'] ?? '');
+$expiryDate             = clean($_POST['expiryDate'] ?? '');
+
+
 $mail = new PHPMailer(true);
+
+
 
 try {
     $mail->isSMTP();
@@ -57,10 +81,13 @@ try {
 
     $mail->isHTML(true);
 
+
+
     $body  = "<h2>Nuova richiesta dal sito Michelegaro.it</h2>";
 
-    
+    //
     //Basic informations
+    //
     if (!empty($details)) {
         $body .= "<h3>Dettagli aggiuntivi:</h3><p>$details</p>";
     }
@@ -74,7 +101,9 @@ try {
         $body .= "<h3>Città:</h3><p>$city</p>";
     }
 
+    //
     //Assistance
+    //
     if (!empty($serviceSpecification)) {
         $body .= "<h3>Servizio richiesto:</h3><p>$serviceSpecification</p>";
     }
@@ -82,7 +111,9 @@ try {
         $body .= "<h3>Tipo PC:</h3><p>$pcType</p>";
     }
 
+    //
     //Purchase Guide
+    //
     if (!empty($useType)) {
         $body .= "<h3>Tipo di utilizzo:</h3><p>$useType</p>";
     }
@@ -96,9 +127,20 @@ try {
         $body .= "<h3>Display:</h3><p>$display</p>";
     }
 
+    //
     //Discord Server
-    
-    //Application
+        //Nothing more
+    //
+
+    //
+    //Website / Application
+    //
+    if (!empty($dbIntegration)) {
+        $body .= "<h3>Database:</h3><p>$dbIntegration</p>";
+    }
+    if (!empty($expiryDate)) {
+        $body .= "<h3>Data di scadenza:</h3><p>$expiryDate</p>";
+    }
 
     $mail->Subject = match($formType) {
         'assistance'    => 'Richiesta assistenza | Michelegaro.it',
@@ -108,6 +150,7 @@ try {
         'bugReport'     => 'Segnalazione bug | Michelegaro.it',
         default         => 'Richiesta generica | Michelegaro.it',
     };
+
 
     $mail->Body    = $body;
     $mail->AltBody = strip_tags(str_replace('<br>', "\n", $body));

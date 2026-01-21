@@ -164,12 +164,8 @@ h2 {
   font-size: var(--size-1);
 }
 
-.form-floating > label {
-  color: rgba(255, 166, 0, 0.877);
-}
-
 .form-select, .form-control {
-  color: rgba(255, 166, 0, 0.877);
+  // color: rgba(255, 166, 0, 0.877);
   background-color: rgba(59, 59, 59);
   border-radius: 15px;
 }
@@ -180,6 +176,12 @@ h2 {
 
 .form-floating > textarea:not(:placeholder-shown) ~ label::after {
     background-color: transparent !important;
+}
+
+.modal-body {
+  max-height: 60vh; /* altezza massima del contenuto */
+  overflow-y: auto;  /* abilita lo scroll verticale */
+  padding-right: 1rem; /* evita che il testo venga coperto dalla scrollbar */
 }
 
 // .form-select {
