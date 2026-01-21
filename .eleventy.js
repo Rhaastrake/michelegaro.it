@@ -3,7 +3,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/php");
+  eleventyConfig.addPassthroughCopy("src/php/!(configExample.php)");
 
   // ✅ File di configurazione
   // Utili per l'indicizzazione
