@@ -7,14 +7,11 @@ permalink: /about/
 <html lang="it" data-bs-theme="dark">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MicheleGaro.it - Homepage</title>
     <meta
-      name="description"
-      content="Michelegaro.it: Assistenza tecnica per PC e sistemi informatici."
-    />
-    <title>Michelegaro.it - Curriculum</title>
-    <meta
-      name="description"
-      content="Assistenza PC e consulenza informatica per privati e aziende. Risoluzione problemi, ottimizzazione e supporto dedicato."
+      name="Michelegaro.it"
+      content="Assistenza tecnica per PC e sistemi informatici."
     />
 
     <link
@@ -35,15 +32,22 @@ permalink: /about/
 
     <link
       rel="shortcut icon"
-      href="src/public/favicon.ico"
+      href="favicon.ico"
       type="image/x-icon"
     />
     {% set partials = "src/partials/" %}
-  </head> 
+  </head>
 
   <body>
-    {% include "_header.html" %}
-    {% include "_footer.html" %}
+    <header>
+      {% include "_header.html" %}
+    </header>
+    <main class="container">
+        <h1>PAGINA CURRICULUM - IN LAVORAZIONE</h1>
+    </main>
+    <footer>
+      {% include "_footer.html" %}
+    </footer>
 
     {% include "_privacyInfoModal.html" %}
     {% include "_termsConditionsModal.html" %}
@@ -55,7 +59,12 @@ permalink: /about/
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="/css/custom.css" />
-    <script src="/js/header.js" defer></script>
-    <script type="module" src="/js/forms.js" defer></script>
+    <script type="module" src="/js/service.js" defer></script>
+    <script type="module" src="/js/form.js" defer></script>
+    <script type="module" src="/js/textAreaAutoExpand.js" defer></script>
+    <script type="module" src="/js/normalizePhoneNumber.js" defer></script>
+    <script type="module" src="/js/disabledButtons.js" defer></script>
+    <script type="module" src="/js/serviceScroll.js" defer></script>
+    <script type="module" src="/js/burger.js" defer></script>
   </body>
 </html>
