@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 .mobile-menu {
   position: fixed;
@@ -13,6 +13,8 @@
   padding: 25px;
   transition: right 0.3s ease;
   z-index: 9999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.active {
@@ -28,7 +30,6 @@
 }
 
 @media (max-width: 1199.98px) {
-
   .nav-links,
   .nav-external-links,
   .nav-extra-links {
@@ -40,6 +41,6 @@
   }
 
   .sidebar {
-    display: none ;
+    display: none;
   }
 }

@@ -16775,6 +16775,8 @@ h2, .h2 {
   padding: 25px;
   transition: right 0.3s ease;
   z-index: 9999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu.active {
