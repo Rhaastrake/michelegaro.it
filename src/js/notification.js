@@ -5,8 +5,9 @@ export function showNotification(text, duration = "default") {
 
   if (duration === "default") duration = 5000;
 
+
   const box = document.createElement("div");
-  box.innerHTML = text; // <--- qui permettiamo l'HTML
+  box.innerHTML = text;
 
   Object.assign(box.style, {
     position: "fixed",
