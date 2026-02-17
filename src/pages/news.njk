@@ -6,13 +6,18 @@ permalink: /news/
 <!DOCTYPE html>
 <html lang="it" data-bs-theme="dark">
   <head>
+
+    {% set partials = "src/partials/" %}
+    {% set pageKey = 'news' | lower %}
+    {% set pageData = site[news] %}
+
+    <title>{{ pageData.seo.title or title or site.title }}</title>
+    <meta name="description" content="{{ pageData.seo.description or site.description }}">
+    <meta name="keywords" content="{{ pageData.seo.keywords }}">
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebFixer- Notizie</title>
-    <meta
-      name="description"
-      content="Assistenza tecnica per PC e sistemi informatici."
-    />
     <meta property="og:title" content="WebFixer.it - Notizie" />
 <meta property="og:description" content="Assistenza tecnica per PC e sistemi informatici." />
 <meta property="og:image" content="{#URL_DI_UN_ANTEPRIMA_LOGOTIPO.jpg#}" />
@@ -39,7 +44,6 @@ permalink: /news/
       href="favicon.ico"
       type="image/x-icon"
     />
-    {% set partials = "src/partials/" %}
   </head>
 
   <body>

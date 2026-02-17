@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="it" data-bs-theme="dark">
   <head>
+
+    {% set partials = "src/partials/" %}
+    {% set pageKey = 'homepage' | lower %}
+    {% set pageData = site[homepage] %}
+
+    <title>{{ pageData.seo.title or title or site.title }}</title>
+    <meta name="description" content="{{ pageData.seo.description or site.description }}">
+    <meta name="keywords" content="{{ pageData.seo.keywords }}">
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebFixer - Homepage</title>
-    <meta
-      name="description"
-      content="Assistenza tecnica per PC e sistemi informatici."
-    />
     <meta property="og:title" content="WebFixer.it - Homepage" />
-<meta property="og:description" content="Assistenza tecnica per PC e sistemi informatici." />
-<meta property="og:image" content="URL_DI_UN_ANTEPRIMA_LOGOTIPO.jpg" />
-<meta property="og:url" content="https://www.webfixer.it" />
+    <meta property="og:description" content="Assistenza tecnica per PC e sistemi informatici." />
+    <meta property="og:image" content="URL_DI_UN_ANTEPRIMA_LOGOTIPO.jpg" />
+    <meta property="og:url" content="https://www.webfixer.it" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Asimovian&family=Cal+Sans&family=Edu+SA+Hand:wght@400..700&family=IM+Fell+English+SC&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quando&family=Rationale&family=Tillana:wght@400;500;600;700;800&display=swap"
@@ -34,7 +38,6 @@
       href="favicon.ico"
       type="image/x-icon"
     />
-    {% set partials = "src/partials/" %}
   </head>
 
   <body>

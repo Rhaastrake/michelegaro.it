@@ -6,13 +6,17 @@ permalink: /about/
 <!DOCTYPE html>
 <html lang="it" data-bs-theme="dark">
   <head>
+    {% set partials = "src/partials/" %}
+    {% set pageKey = 'about' | lower %}
+    {% set pageData = site[about] %}
+ 
+    <title>{{ pageData.seo.title or title or site.title }}</title>
+    <meta name="description" content="{{ pageData.seo.description or site.description }}">
+    <meta name="keywords" content="{{ pageData.seo.keywords }}">
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebFixer - Curriculum</title>
-    <meta
-      name="description"
-      content="Assistenza tecnica per PC e sistemi informatici."
-    />
     <meta property="og:title" content="WebFixer - Curriculum" />
 <meta property="og:description" content="Assistenza tecnica per PC e sistemi informatici." />
 <meta property="og:image" content="{#URL_DI_UN_ANTEPRIMA_LOGOTIPO.jpg#}" />
@@ -39,7 +43,6 @@ permalink: /about/
       href="favicon.ico"
       type="image/x-icon"
     />
-    {% set partials = "src/partials/" %}
   </head>
 
   <body>
